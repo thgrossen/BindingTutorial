@@ -43,14 +43,14 @@ class ViewController: NSViewController {
     
     @IBAction func tableViewAction(_ sender: Any) {
         
-        let index: Int = tableView.selectedRow
+        let index: Int = self.tableView.selectedRow
         
         if index > -1 {
-            let person: Person = people[index]
-            arrayContent.stringValue = "First Name: \(person.firstName)\nLast Name: \(person.lastName)\nAge: \(person.age)"
+            let person: Person = self.people[index]
+            self.arrayContent.stringValue = "First Name: \(person.firstName)\nLast Name: \(person.lastName)\nAge: \(person.age)"
         }
         else {
-            arrayContent.stringValue = ""
+            self.arrayContent.stringValue = ""
         }
     }
 }
